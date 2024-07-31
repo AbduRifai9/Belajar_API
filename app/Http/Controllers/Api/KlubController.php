@@ -35,7 +35,7 @@ class KlubController extends Controller
             return response()->json([
                 'success' => false,
                 'message' => 'validasi gagal',
-                'errors' => $validate->errors(),
+                'errors' => $validator->errors(),
             ], 422);
         }
 
@@ -93,7 +93,7 @@ class KlubController extends Controller
             return response()->json([
                 'success' => false,
                 'message' => 'validasi gagal',
-                'errors' => $validate->errors(),
+                'errors' => $validator->errors(),
             ], 422);
         }
 

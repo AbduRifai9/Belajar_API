@@ -105,7 +105,7 @@ class PemainController extends Controller
             return response()->json([
                 'success' => false,
                 'message' => 'validasi gagal',
-                'errors' => $validate->errors(),
+                'errors' => $validator->errors(),
             ], 422);
         }
 
@@ -116,7 +116,7 @@ class PemainController extends Controller
                 Storage::delete($pemain->foto);
 
                 $path = $request->file('foto')->store('public/foto');
-                $pemain->logo = $path;
+                $pemain->foto = $path;
             }
             $pemain->nama_pemain = $request->nama_pemain;
             $pemain->tgl_lahir = $request->tgl_lahir;
