@@ -17,7 +17,7 @@
                         Selamat Datang @guest
                         @else
                             <b>
-                                {(Auth::user()->name)}
+                                {{ Auth::user()->name }}
                             </b>
                         @endguest
                     </div>
